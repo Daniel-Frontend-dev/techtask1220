@@ -6,9 +6,6 @@ import "../styles/global.css";
 const MyApp = ({
   Component,
   pageProps: { session, ...pageProps }
-}: {
-  Component: any;
-  pageProps: any;
 }) => {
   return (
     <NextUIProvider>

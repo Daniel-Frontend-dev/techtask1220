@@ -18,7 +18,6 @@ import Button from "../components/Button";
 // import DataTable from "@/components/pagination";
 import { generateMockData } from "../data/mockData";
 import { useState } from "react";
-import { toggle } from "@nextui-org/theme";
 
 ChartJS.register(Title, Tooltip, Legend, CategoryScale, LinearScale, PointElement, LineElement, Decimation);
 

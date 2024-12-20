@@ -19,7 +19,6 @@ import {
   ChipProps,
   SortDescriptor,
 } from "@nextui-org/react";
-import Image from 'next/image';
 
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
   size?: number;

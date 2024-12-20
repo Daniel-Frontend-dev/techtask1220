@@ -30,7 +30,7 @@ export default NextAuth({
     signIn: "/login",
   },
   callbacks: {
-    async session({ session, token }: {session: any, token: any}) {
+    async session({ session, token }) {
       // Add custom properties to the session object
       if (token) {
         session.user.id = token.id;
