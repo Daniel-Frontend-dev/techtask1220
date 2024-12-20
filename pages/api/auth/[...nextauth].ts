@@ -1,7 +1,5 @@
-import NextAuth from "next-auth";
+import NextAuth, { Session } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-
-import { DefaultSession } from "next-auth";
 
 export default NextAuth({
   providers: [
@@ -32,10 +30,10 @@ export default NextAuth({
     signIn: "/login",
   },
   callbacks: {
-    async session({ session, token }: { session: DefaultSession; token: any }) {
+    async session({ session, token }: { session: Session; token: any }) {
       // Check if token and session.user exist
       if (token && "id" in token && session.user) {
-        session.user?.id = token.id as string;
+        session.user.id = token.id as string;
       }
       return session;
     },
