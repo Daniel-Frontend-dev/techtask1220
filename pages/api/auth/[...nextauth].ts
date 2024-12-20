@@ -30,7 +30,7 @@ export default NextAuth({
     signIn: "/login",
   },
   callbacks: {
-    async session({ session, token }: { session: Session; token: any }) {
+    async session({ session, token }: { session: Session; token}) {
       // Check if token and session.user exist
       if (token && "id" in token && session.user) {
         session.user.id = token.id as string;
